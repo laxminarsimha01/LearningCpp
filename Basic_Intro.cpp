@@ -7,7 +7,7 @@ int main()
     // Part-1 Output messages to the console
     cout << "Hello World!" << endl;
     cout << "This is my first C++ application.\n";
-    cout << "Myself, Narsimha Reddy Learning c++ Programming." << endl;
+    cout << "Myself,Learning c++ Programming." << endl;
     
 
     // Part-2
@@ -43,6 +43,32 @@ int main()
     cout << "Max Value + 1 is : " << intMax+1 << endl; // This will cause overflow
     cout << "Min Value is : " << INT_MIN << endl;
     cout << "Min Value - 1 is : " << intMax-1 << endl; // This will cause underflow
+
+    // Part-3
+    // Discussion about ASCII values
+    cout << int('c')<< endl; // ASCII value of 'a'
+    cout << int('A')<< endl; // ASCII value of 'A'
+    cout << int('0')<< endl; // ASCII value of '0'
+    cout << char(67)<< endl; // Character for ASCII value 67
+
+
+    // Ciphering words into ASCII values -- "Extra spaces and New lines dosen't matter"
+    string word, decipheredWord;
+    cin >> word;
+    for (char c : word)
+    {
+        cout <<int(c) << " "; // Printing ASCII word in 1 line
+        decipheredWord += int(c); // Concatenating ASCII values to decipheredWord
+    } 
+
+    // Deciphering ASCII values back to characters
+    cout << endl << "Deciphered Word: "; // This will print the ASCII values as characters
+    for (char c : decipheredWord)
+    {
+        cout << char(c); // Printing characters from ASCII values
+    }
+
+    //system("pause>0"); // Pause the console to see the output
 
 }
 //Alt+Ctrl+N to Run the Code
