@@ -30,4 +30,19 @@ int main()
         cout << endl;
     }
 
+    // Part -3: Print an inverted right-angled triangle
+    cout << "Enter the height of inverted triangle: ";
+    cin >> height;
+    for (int i=height; i>=1; i--) {
+        for ( int j=1; j<=i; j++)
+            cout << setw(3) << shape;
+        cout << endl;
+    }
+
+    // Part -4: Print a pyramid
+    cout << "Enter the height of the pyramid: ";
+    cin >> height;
+    for (int i=1; i<=height+1; i++)
+        cout << setw(height-1) << shape*i << endl;
+
 }
