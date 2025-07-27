@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 int main()
@@ -42,7 +43,29 @@ int main()
     // Part -4: Print a pyramid
     cout << "Enter the height of the pyramid: ";
     cin >> height;
-    for (int i=1; i<=height+1; i++)
-        cout << setw(height-1) << shape*i << endl;
+    for (int i=1; i<=height; i++)
+    {
+        for (int k=height-i; k>0; k--)
+        {
+            cout << " ";
+        }
+        for (int j=1; j<=i; j++)
+        {
+            cout << shape << " ";
+        }
+        cout << endl;
+    }
+
+    // Part -5: Print an inverted pyramid
+    cout << "Enter the height of the inverted pyramid: ";
+    cin >> height;
+    for (int i=height; i>=1; i--)
+    {
+        for (int k = 0; k<height-i; k++)
+            cout << " ";
+        for (int j=1; j<=i; j++)
+            cout << shape << " ";
+        cout << endl;
+    }
 
 }
